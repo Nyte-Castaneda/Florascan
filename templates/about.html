@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - FloraScan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="page">
+    <!-- Top Navigation -->
+    <header class="top-nav">
+      <div class="logo">
+        <span class="logo-text">FloraScan</span>
+        <span class="logo-leaf">🌿</span>
+      </div>
+      <nav class="nav-links">
+        <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+        <a href="{{ url_for('about') }}" class="nav-link active">About Us</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content about-content">
+      <section class="about-section">
+        <h1 class="about-title">About FloraScan</h1>
+        
+        <div class="about-text">
+          <p>
+            FloraScan is an innovative AI-powered plant identification platform dedicated to unlocking the secrets of Philippine flora. Our mission is to make plant identification accessible, accurate, and educational for everyone.
+          </p>
+
+          <h2>Our Mission</h2>
+          <p>
+            We believe that understanding and appreciating the rich biodiversity of the Philippines starts with proper identification. FloraScan leverages cutting-edge artificial intelligence to help users identify plants quickly and accurately, fostering a deeper connection with nature.
+          </p>
+
+          <h2>How It Works</h2>
+          <p>
+            Simply upload a clear photo of any plant, and our advanced AI system analyzes its features, leaves, flowers, and other characteristics to provide you with accurate identification results. Whether you're a botanist, gardener, or nature enthusiast, FloraScan makes plant identification simple and accessible.
+          </p>
+
+          <h2>Philippine Flora</h2>
+          <p>
+            The Philippines is home to thousands of unique plant species, many of which are endemic to the archipelago. FloraScan specializes in identifying these diverse species, helping preserve and document the incredible botanical heritage of the Philippines.
+          </p>
+
+          <h2>Get Started</h2>
+          <p>
+            Ready to explore the world of Philippine flora? Head back to our <a href="{{ url_for('index') }}" class="inline-link">home page</a> and start identifying plants today!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Bar -->
+    <footer class="page-footer">
+      <p>&copy; 2024 FloraScan. Plant Identification System.</p>
+    </footer>
+  </div>
+</body>
+</html>

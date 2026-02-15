@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FloraScan - Plant Identification</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="page">
+    <!-- Top Navigation -->
+    <header class="top-nav">
+      <div class="logo">
+        <span class="logo-text">FloraScan</span>
+        <span class="logo-leaf">🌿</span>
+      </div>
+      <nav class="nav-links">
+        <a href="{{ url_for('index') }}" class="nav-link active">Home</a>
+        <a href="{{ url_for('about') }}" class="nav-link">About Us</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-image">
+        <div class="hero-overlay">
+          <h1 class="hero-title">Unlock the Secrets of Philippine Flora</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section class="ask-expert">
+        <h2 class="section-title">Ask Our AI Plant Expert</h2>
+
+        <div class="ask-layout">
+          <!-- Ask card -->
+          <div class="ask-card">
+            <div class="ask-card-header">
+              <div class="camera-icon" aria-hidden="true">📷</div>
+              <span>Ask Our AI Plant Expert</span>
+            </div>
+
+            <div class="photo-upload-area" id="photoUploadArea">
+              <input type="file" id="photoInput" accept="image/*" capture="environment" style="display: none;" />
+              <div class="upload-placeholder" id="uploadPlaceholder">
+                <div class="camera-icon-large">📸</div>
+                <p>Click to upload a photo or take a picture</p>
+                <span class="upload-hint">Supports JPG, PNG, WEBP</span>
+              </div>
+              <img id="previewImage" class="preview-image" style="display: none;" alt="Plant preview" />
+            </div>
+
+            <div class="ask-input-row">
+              <input
+                type="text"
+                placeholder="Or describe the plant"
+                class="ask-input"
+                id="plantDescription"
+              />
+              <button class="btn ask-btn" id="askButton">Ask</button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" style="display: none; margin-top: 20px;">
+              <div id="resultContent"></div>
+            </div>
+          </div>
+
+          <!-- How it works -->
+          <aside class="how-it-works">
+            <h3>How It Works</h3>
+            <ol>
+              <li>Upload a clear photo of the plant.</li>
+              <li>Our AI analyzes plant features and details.</li>
+              <li>Get instant identification results with plant information.</li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Common Plants -->
+      <section class="common-plants">
+        <div class="common-header">
+          <h2 class="section-title">Common Philippine Plants</h2>
+        </div>
+
+        <div class="plant-grid">
+          <article class="plant-card">
+            <div class="plant-photo plant-photo-spider"></div>
+            <div class="plant-info">
+              <div class="plant-name">Spider Plant</div>
+              <div class="plant-scientific">Chlorophytum comosum</div>
+            </div>
+          </article>
+
+          <article class="plant-card">
+            <div class="plant-photo plant-photo-snake"></div>
+            <div class="plant-info">
+              <div class="plant-name">Snake Plant</div>
+              <div class="plant-scientific">Sansevieria trifasciata</div>
+            </div>
+          </article>
+
+          <article class="plant-card">
+            <div class="plant-photo plant-photo-jade"></div>
+            <div class="plant-info">
+              <div class="plant-name">Jade Plant</div>
+              <div class="plant-scientific">Crassula ovata</div>
+            </div>
+          </article>
+
+          <article class="plant-card">
+            <div class="plant-photo plant-photo-pandakaki"></div>
+            <div class="plant-info">
+              <div class="plant-name">Pandakaki</div>
+              <div class="plant-scientific">Tabernaemontana pandacaqui</div>
+            </div>
+          </article>
+
+          <article class="plant-card">
+            <div class="plant-photo plant-photo-ti"></div>
+            <div class="plant-info">
+              <div class="plant-name">Ti Plant</div>
+              <div class="plant-scientific">Cordyline fruticosa</div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Bar -->
+    <footer class="page-footer">
+      <p>&copy; 2024 FloraScan. Plant Identification System.</p>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
